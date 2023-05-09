@@ -175,13 +175,13 @@ VALUES
 						(5, '34', 5, 0);
 
 -- Add data Exam
-INSERT INTO Exam (ExamID, `Code`, Title, CategoryID, Duration, CreatorID, CreateDate)
+INSERT INTO Exam (`Code`, Title, CategoryID, Duration, CreatorID, CreateDate)
 VALUES
-						(1, 'EXAM01', 'TỰ nhiên', 1, '01:00:00', 1, '2022-01-10'),
-						(2, 'EXAM02', 'Toán', 2, '00:30:00', 2, '2022-01-11'),
-						(3, 'EXAM03', 'Xã hội', 2, '01:30:00', 2, '2022-01-12'),
-						(4, 'EXAM03', 'Toán', 4, '01:30:00', 4, '2022-01-12'),
-						(5, 'EXAM04', 'Toán', 3, '01:00:00', 2, '2022-01-13');
+						('EXAM01', 'TỰ nhiên', 1, '01:00:00', 1, '2022-01-10'),
+						('EXAM02', 'Toán', 2, '00:30:00', 2, '2022-01-11'),
+						('EXAM03', 'Xã hội', 2, '01:30:00', 2, '2022-01-12'),
+						('EXAM03', 'Toán', 4, '01:30:00', 4, '2022-01-12'),
+						('EXAM04', 'Toán', 3, '01:00:00', 2, '2022-01-13');
 
 -- Add data ExamQuestion
 INSERT INTO ExamQuestion (ExamID, QuestionID)

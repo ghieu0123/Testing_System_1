@@ -1,0 +1,120 @@
+#grand-parent,#parent, #child{
+    border: 1px solid;
+    padding:10px;
+}
+
+th, td{
+    border:  1px solid blue;
+}
+table{
+    width: 80%;
+    border-collapse: collapse;
+}
+
+#group-info{
+    border: 1px solid #cccccc;
+    width: 350px;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: #dddddd;
+    border-radius: 5px;
+    position: fixed;
+    top: 20%;
+    left: 20%;
+    display: none;
+}
+
+#account-form-title{
+    text-align: center;
+}
+
+#account-info{
+    border: 1px solid #cccccc;
+    width: 350px;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: #dddddd;
+    border-radius: 5px;
+    position: fixed;
+    top: 20%;
+    left: 40%;
+    display: none;
+}
+
+#account-info .account-input{
+    float: right;
+}
+
+#msg{
+    display: none;
+    font-size: 20px;
+    color: blue;
+    position: fixed;
+    top: 1%;
+    right: 2%;
+    background-color: #ffffff;
+    border: 1px solid green;
+    padding: 10px 50px;
+    border-radius: 5px;
+}
+.header{
+    border-bottom:  1px solid #dddddd;
+}
+.column{
+    float: left;
+}
+.clearfix{
+    clear: both;
+}
+.left{
+    width: 50%;
+}
+.right{
+    width: 50%;
+    padding-top: 40px;
+    box-sizing: border-box;
+}
+.logo a{
+    display: inline-block;
+}
+.logo,.menu-icon{
+    display: inline;
+}
+.menu-icon span i{
+    font-size: 30px;
+}
+.user-info{
+    text-align: right;
+}
+.sidebar{
+    width: 20%;
+    border-right:  1px solid #dddddd;
+}
+.main{
+    width: 80%;
+    min-height: 500px;
+}
+.vertical-menu{
+    list-style-type: none;
+}
+.vertical-menu li{
+    border-bottom: 1px solid #dddddd;
+    padding: 5px;
+}
+.vertical-menu li a{
+    text-decoration: none;
+}
+.vertical-menu li a .menu-icon{
+    display: none;
+}
+.open{
+    display: none;
+}
+.footer{
+    text-align: center;
+    border-top: 1px solid #dddddd;
+    padding: 20px 0;
+}
+#btnCreate{
+    margin-bottom: 10px;
+}

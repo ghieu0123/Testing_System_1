@@ -12,7 +12,7 @@ VALUES
                         ('Phó giám đốc'	),
                         ('Bán Hàng'		),
                         ('Chuyên Viên'	),
-                        ('Chủ Tịch'		);
+                        ('Phòng chờ');
                         
 -- Add data Position
 INSERT INTO Position (PositionName)
@@ -31,16 +31,16 @@ VALUES
 -- Add data Account              
 INSERT INTO Account (Email, Username, Fullname, DepartmentID, PositionID, CreateDate)
 VALUES
-						('ha123@gmail.com', 'ha', 'Tran Ha', 1, 1, '2022-01-01'),
-						('la123@gmail.com', 'la', 'Tran La', 2, 2, '2022-01-01'),
-						('lin123@gmail.com', 'lin', 'Nguyen Lin', 1, 1, '2022-01-01'),
-						('min123@gmail.com', 'min', 'Quach Min', 3, 3, '2022-01-01'),
+						('ha123@gmail.com', 'ha', 'Tran Ha', 7, 1, '2022-01-01'),
+						('la123@gmail.com', 'la', 'Tran La', 2, 9, '2022-01-01'),
+						('lin123@gmail.com', 'lin', 'Nguyen Lin', 6, 1, '2022-01-01'),
+						('min123@gmail.com', 'min', 'Quach Min', 8, 3, '2022-01-01'),
 						('na123@gmail.com', 'na', 'Trieu Na', 4, 4, '2022-01-01'),
                         ('ho123@gmail.com', 'ho', 'Nguyen Ho', 1, 1, '2022-01-01'),
 						('lu123@gmail.com', 'lu', 'Tran Lu', 2, 2, '2022-01-01'),
-						('ling123@gmail.com', 'ling', 'Do Ling', 1, 1, '2022-01-01'),
+						('ling123@gmail.com', 'ling', 'Do Ling', 8, 1, '2022-01-01'),
 						('man123@gmail.com', 'man', 'Quach Man', 3, 3, '2022-01-01'),
-						('kien123@gmail.com', 'kien', 'Nguyen kien', 4, 4, '2022-01-01');
+						('kien123@gmail.com', 'kien', 'Nguyen kien', 7, 4, '2022-01-01');
                         
 -- Add data Group
 INSERT INTO `Group` (GroupName, CreatorID, CreateDate)
@@ -56,7 +56,6 @@ VALUES
                         ('Chuyên Viên team', 2, '2022-01-01'	),
                         ('Chủ Tịch team', 3, '2022-01-01'		);
                         
-                        
 -- Add data Group Account
 INSERT INTO GroupAccount (GroupID, AccountID, JoinDate)
 VALUES
@@ -64,8 +63,8 @@ VALUES
 						(7, 	7, '2022-01-01'),
 						(8, 	8, '2022-01-01'),
 						(9, 	9, '2022-01-01'),
-						(10, 	10, '2022-01-01'),
-                        (11, 	11, '2022-01-01'),
+						(10, 	12, '2022-01-01'),
+                        (10, 	11, '2022-01-01'),
 						(12, 	12, '2022-01-01'),
 						(13, 	13, '2022-01-01'),
 						(14, 	14, '2022-01-01'),
@@ -88,30 +87,30 @@ VALUES
 -- Add data CategoryQuestion
 INSERT INTO CategoryQuestion (CategoryName)
 VALUES
-						('Toán'),
-						('Lý'),
-						('Hóa'),
-						('Văn'),
-						('Anh'),
-                        ('Toán'),
-						('Lý'),
-						('Hóa'),
-						('Văn'),
-						('Anh');
+						('ToánTN'),
+						('LýTN'),
+						('HóaTN'),
+						('VănTN'),
+						('AnhTN'),
+                        ('ToánLT'),
+						('LýLT'),
+						('HóaLT'),
+						('VănLT'),
+						('AnhLT');
 
 -- Add data Question
 INSERT INTO Question (Content, CategoryID, TypeID, CreatorID, CreateDate)
 VALUES
 						('Mèo kêu như nào?', 1, 1, 1, '2022-01-01'),
 						('1+5=?', 2, 2, 2, '2022-01-02'),
-						('Có bao nhiêu tỉnh ở Việt Nam?', 3, 3, 3, '2022-01-03'),
-						('Có bao nhiêu phép toán?',4, 4, 4, '2022-01-04'),
-						('33+3=?', 5, 5, 5, '2022-01-05'),
-                        ('Mèo kêu như nào?', 1, 1, 1, '2022-01-01'),
+						('Có bao nhiêu tỉnh ở Việt Nam?', 7, 3, 3, '2022-01-03'),
+						('Có bao nhiêu phép toán?',12, 2, 4, '2022-01-04'),
+						('33+3=?', 5, 1, 5, '2022-01-05'),
+                        ('Mèo kêu như nào?', 8, 1, 1, '2022-01-01'),
 						('1+5=?', 2, 2, 2, '2022-01-02'),
-						('Có bao nhiêu tỉnh ở Việt Nam?', 3, 3, 3, '2022-01-03'),
-						('Có bao nhiêu phép toán?',4, 4, 4, '2022-01-04'),
-						('33+3=?', 5, 5, 5, '2022-01-05');
+						('Có bao nhiêu tỉnh ở Việt Nam?', 6, 3, 3, '2022-01-03'),
+						('Có bao nhiêu phép toán?',3, 3, 4, '2022-01-04'),
+						('33+3=?', 5, 1, 5, '2022-01-05');
 
 -- Add data Answer
 INSERT INTO Answer (Content, QuestionID, isCorrect)
@@ -162,10 +161,11 @@ SELECT DepartmentName FROM Department;
 SELECT DepartmentID FROM Department WHERE DepartmentName = 'Sale';
 
 -- Lấy ra thông tin account có full name dài nhất
-SELECT MAX(Fullname) FROM `Account`;
+SELECT * FROM `Account` WHERE LENGTH(Fullname) = (SELECT MAX(Length(Fullname)) FROM `Account`);
 
 -- Lấy ra thông tin account có full name dài nhất và thuộc phòng ban có id = 3
-SELECT MAX(Fullname) FROM `Account` WHERE DepartmentID = 3;
+SELECT * FROM `Account` WHERE DepartmentID = 3
+AND LENGTH(Fullname) = (SELECT MAX(Length(Fullname)) FROM `Account` WHERE DepartmentID = 3);
 
 -- Lấy ra tên Group đã tham gia trước ngày 20/12/2019
 SELECT GroupName, CreateDate  FROM `Group` WHERE CreateDate < '2019-12-20';

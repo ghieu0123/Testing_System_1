@@ -138,23 +138,21 @@ VALUES
 						(5, 	5, '2022-01-01');
                         
 -- Add data TypeQuestion
-INSERT INTO TypeQuestion (TypeID, TypeName)
+INSERT INTO TypeQuestion (TypeName)
 VALUES
-						(1, 	'Trắc nghiệm'),
-						(2, 	'Tự luận'),
-                        (3, 	'Trắc nghiệm'),
-						(4, 	'Tự luận'),
-						(5, 	'Tổng hợp');
+						('Trắc nghiệm'),
+						('Tự luận'),
+						('Tổng hợp');
                         
 
 -- Add data CategoryQuestion
-INSERT INTO CategoryQuestion (CategoryID, CategoryName)
+INSERT INTO CategoryQuestion (CategoryName)
 VALUES
-						(1, 	'Toán'),
-						(2, 	'Lý'),
-						(3, 	'Hóa'),
-						(4, 	'Văn'),
-						(5, 	'Anh');
+						('ToánVD'),
+						('LýVD'),
+						('HóaVD'),
+						('VănVD'),
+						('AnhVD');
 
 -- Add data Question
 INSERT INTO Question (Content, CategoryID, TypeID, CreatorID, CreateDate)
@@ -162,17 +160,17 @@ VALUES
 						('Mèo kêu như nào?', 1, 1, 1, '2022-01-01'),
 						('1+5=?', 2, 2, 2, '2022-01-02'),
 						('Có bao nhiêu tỉnh ở Việt Nam?', 3, 3, 3, '2022-01-03'),
-						('Có bao nhiêu phép toán?',4, 4, 4, '2022-01-04'),
-						('33+3=?', 5, 5, 5, '2022-01-05');
+						('Có bao nhiêu phép toán?', 4, 2, 4, '2022-01-04'),
+						('33+3=?', 5, 1, 5, '2022-01-05');
 
 -- Add data Answer
-INSERT INTO Answer (AnswerID, Content, QuestionID, isCorrect)
+INSERT INTO Answer ( Content, QuestionID, isCorrect)
 VALUES
-						(1, 'meow', 1, 1),
-						(2, '5', 2, 0),
-						(3, '63 Tỉnh', 3, 1),
-						(4, '4', 4, 1),
-						(5, '34', 5, 0);
+						('meow', 1, 1),
+						('5', 2, 0),
+						('63 Tỉnh', 3, 1),
+						('4', 4, 1),
+						('34', 5, 0);
 
 -- Add data Exam
 INSERT INTO Exam (`Code`, Title, CategoryID, Duration, CreatorID, CreateDate)
@@ -191,3 +189,6 @@ VALUES
 						(2, 1),
 						(2, 2),
 						(3, 3);
+                        
+											
+                        

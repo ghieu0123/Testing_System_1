@@ -1,0 +1,78 @@
+<div class="container-lg">
+
+    <div class="alert alert-success alert-dismissible" id="alert-success">
+        <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+        <strong>Thành công!</strong>.
+    </div>
+
+    <div class="table-responsive">
+        <div class="table-wrapper">
+            <div class="table-title">
+                <div class="row">
+                    <div class="col-sm-8"><h2>Account <b>List</b></h2></div>
+                    <div class="col-sm-4">
+                        <button type="button" class="btn btn-info add-new"  onclick="openAddNewModalAccount()"><i class="fa fa-plus"></i> Add New</button>
+                    </div>
+                </div>
+            </div>
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th style="width: 10%;">STT</th>
+                        <th>Name</th>
+                        <th>Department</th>
+                        <th>Phone</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<!-- Modal HTML -->
+<div id="accountModal" class="modal fade" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Confirmation</h5>
+                <button type="button" class="close" aria-label="Close" onclick="hideAddNewModalAccount()">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <input type="hidden" id="accountId" name="accountId">
+            
+                <label for="department"><b>Department</b></label>
+                <select class="form-select" name="department" id="department-select">                    
+                </select>
+                <br>
+                <label for="fullName"><b>Full Name</b></label>
+                <input type="text" placeholder="Enter full name" name="fullname" id="fullName" required>
+
+                <label for="email"><b>Email</b></label>
+                <input type="text" placeholder="Enter email" name="email" id="email" required>
+
+                <label for="password"><b>Password</b></label>
+                <input type="text" class="password" placeholder="Enter password" name="password" id="password" required>
+
+                <label for="confirmPassword"><b>Confirm Password</b></label>
+                <input type="text" placeholder="Enter confirm password" name="confirmPassword" id="confirmPassword" required>
+            
+                <label for="phone"><b>phone</b></label>
+                <input type="text" placeholder="Enter phone" name="phone" id="phone" required>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" onclick="hideAddNewModalAccount()" >Cancel</button>
+                <button type="button" class="btn btn-primary" onclick="saveAccount()">Save changes</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+

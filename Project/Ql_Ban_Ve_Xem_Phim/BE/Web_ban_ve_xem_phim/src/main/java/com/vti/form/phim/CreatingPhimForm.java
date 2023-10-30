@@ -7,6 +7,7 @@ import javax.validation.constraints.NotNull;
 
 import org.hibernate.validator.constraints.Length;
 
+import com.vti.entity.Phim;
 import com.vti.entity.User;
 import com.vti.validation.phim.PhimNameNotExists;
 
@@ -52,6 +53,10 @@ public class CreatingPhimForm {
 	@NotNull(message = "{Phim.createPhim.form.daoDien.NotBlank}")
 	private Integer giaVe;
 	
-	private int userId;
+	private User user = new User();
 	
+	public Phim toEntity() {
+		return new Phim(tenPhim, daoDien, dienVien, theLoai, thoiLuong, tomTat,
+				giaVe, ngayKhoiChieu, poster, user);
+	}
 }

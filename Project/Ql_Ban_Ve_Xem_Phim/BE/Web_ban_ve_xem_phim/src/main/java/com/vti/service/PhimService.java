@@ -36,7 +36,7 @@ public class PhimService implements IPhimService {
 	public void createPhim(int authenUserId, CreatingPhimForm form) {
 		
 		// convert form to entity
-		Phim phimEntity = modelMapper.map(form, Phim.class);
+		Phim phimEntity = form.toEntity();
 		
 		phimEntity.getUser().setUserId(authenUserId);
 		

@@ -24,7 +24,6 @@ import lombok.NoArgsConstructor;
 @Table(name = "`Phim`")
 @Data
 @NoArgsConstructor
-@AllArgsConstructor
 public class Phim implements Serializable {
 
 	private static final long serialVersionUID = 1L;
@@ -66,4 +65,19 @@ public class Phim implements Serializable {
 	@ManyToOne
 	@JoinColumn(name="creator_id")
 	private User user;
+
+	public Phim(String tenPhim, String daoDien, String dienVien, String theLoai, String thoiLuong, String tomTat,
+			Integer giaVe, Date ngayKhoiChieu, String poster, User user) {
+		super();
+		this.tenPhim = tenPhim;
+		this.daoDien = daoDien;
+		this.dienVien = dienVien;
+		this.theLoai = theLoai;
+		this.thoiLuong = thoiLuong;
+		this.tomTat = tomTat;
+		this.giaVe = giaVe;
+		this.ngayKhoiChieu = ngayKhoiChieu;
+		this.poster = poster;
+		this.user = user;
+	}
 }

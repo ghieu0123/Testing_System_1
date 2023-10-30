@@ -16,9 +16,9 @@ import javax.persistence.Table;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+@Data
 @Entity
 @Table(name = "`User`")
-@Data
 @NoArgsConstructor
 public class User implements Serializable {
 
@@ -30,7 +30,7 @@ public class User implements Serializable {
 	private Integer userId;
 
 	@Column(name = "username", length = 50, nullable = false, unique = true, updatable = false)
-	private String username;
+	private String userName;
 	
 	@Column(name = "email", length = 50, nullable = false, unique = true)
 	private String email;
@@ -54,4 +54,12 @@ public class User implements Serializable {
 	
 	@OneToMany(mappedBy = "user")
 	private List<Phim> phims;
+	
+	public User(String userName, String email, String password, String firstName, String lastName) {
+		this.userName = userName;
+		this.email = email;
+		this.password = password;
+		this.firstName = firstName;
+		this.lastName = lastName;
+	}
 }

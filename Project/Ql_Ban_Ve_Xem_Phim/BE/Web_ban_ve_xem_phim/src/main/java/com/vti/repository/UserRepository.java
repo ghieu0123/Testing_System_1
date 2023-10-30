@@ -8,7 +8,7 @@ import org.springframework.data.repository.query.Param;
 import com.vti.entity.User;
 import com.vti.entity.UserStatus;
 
-public interface IUserRepository extends JpaRepository<User, Integer>, JpaSpecificationExecutor<User> {
+public interface UserRepository extends JpaRepository<User, Integer>, JpaSpecificationExecutor<User> {
 
 	public boolean existsByUserName(String userName);
 
@@ -21,7 +21,7 @@ public interface IUserRepository extends JpaRepository<User, Integer>, JpaSpecif
 			+ " WHERE 	email = :email")
 	public UserStatus findStatusByEmail(@Param("email") String email);
 
-	public User findByUserName(String name);
+	public User findByUserName(String userName);
 	
 	public User findByEmail(String email);
 }

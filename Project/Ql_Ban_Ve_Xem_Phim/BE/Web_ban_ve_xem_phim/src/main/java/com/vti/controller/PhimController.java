@@ -15,6 +15,7 @@ import org.springframework.context.MessageSource;
 import org.springframework.context.i18n.LocaleContextHolder;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.core.Authentication;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -27,8 +28,10 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.vti.dto.PhimDTO;
 import com.vti.entity.Phim;
+import com.vti.entity.User;
 import com.vti.form.phim.CreatingPhimForm;
 import com.vti.service.IPhimService;
+import com.vti.service.IUserService;
 import com.vti.validation.phim.PhimIDExists;
 
 @CrossOrigin("*")
@@ -39,6 +42,8 @@ public class PhimController {
 
 	@Autowired
 	private IPhimService service;
+	
+	private IUserService userService;
 	
 	@Autowired
 	private ModelMapper modelMapper;
@@ -77,8 +82,12 @@ public class PhimController {
 	}
 
 	@PostMapping()
-	public ResponseEntity<?> createDepartment(@RequestBody @Valid CreatingPhimForm form) {
-		service.createPhim(5, form);
+	public ResponseEntity<?> createDepartment(Authentication authentication, @RequestBody @Valid CreatingPhimForm form) {
+		// get user info
+		User user = userService.findUserByUserName(authentication.getName());
+		
+		service.createPhim(user.getUserId(), form);
+		
 		return new ResponseEntity<>("Create sucesssfully!", HttpStatus.OK);
 	}
 

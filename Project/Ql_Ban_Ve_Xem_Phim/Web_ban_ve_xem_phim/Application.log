@@ -1,0 +1,196 @@
+2023-10-30 17:54:51 [background-preinit] INFO  o.h.v.i.u.Version                                  - HV000001: Hibernate Validator 6.2.0.Final 
+2023-10-30 17:54:51 [restartedMain] INFO  c.v.WebBanVeXemPhimApplication                     - Starting WebBanVeXemPhimApplication using Java 11.0.19 on LAPTOP-F840DCUN with PID 11664 (C:\Users\ACER\Desktop\VTI\Spring\Web_ban_ve_xem_phim\target\classes started by ACER in C:\Users\ACER\Desktop\VTI\Spring\Web_ban_ve_xem_phim) 
+2023-10-30 17:54:51 [restartedMain] INFO  c.v.WebBanVeXemPhimApplication                     - No active profile set, falling back to default profiles: default 
+2023-10-30 17:54:51 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor    - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable 
+2023-10-30 17:54:51 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor    - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG' 
+2023-10-30 17:54:52 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate          - Bootstrapping Spring Data JPA repositories in DEFAULT mode. 
+2023-10-30 17:54:53 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate          - Finished Spring Data repository scanning in 45 ms. Found 2 JPA repository interfaces. 
+2023-10-30 17:54:53 [restartedMain] INFO  o.s.b.w.e.t.TomcatWebServer                        - Tomcat initialized with port(s): 8080 (http) 
+2023-10-30 17:54:53 [restartedMain] INFO  o.a.c.h.Http11NioProtocol                          - Initializing ProtocolHandler ["http-nio-8080"] 
+2023-10-30 17:54:53 [restartedMain] INFO  o.a.c.c.StandardService                            - Starting service [Tomcat] 
+2023-10-30 17:54:53 [restartedMain] INFO  o.a.c.c.StandardEngine                             - Starting Servlet engine: [Apache Tomcat/9.0.55] 
+2023-10-30 17:54:53 [restartedMain] INFO  o.a.c.c.C.[.[.[/]                                  - Initializing Spring embedded WebApplicationContext 
+2023-10-30 17:54:53 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext     - Root WebApplicationContext: initialization completed in 1914 ms 
+2023-10-30 17:54:53 [restartedMain] INFO  c.z.h.HikariDataSource                             - HikariPool-1 - Starting... 
+2023-10-30 17:54:54 [restartedMain] INFO  c.z.h.HikariDataSource                             - HikariPool-1 - Start completed. 
+2023-10-30 17:54:54 [restartedMain] INFO  o.h.j.i.u.LogHelper                                - HHH000204: Processing PersistenceUnitInfo [name: default] 
+2023-10-30 17:54:54 [restartedMain] INFO  o.h.Version                                        - HHH000412: Hibernate ORM core version 5.6.1.Final 
+2023-10-30 17:54:54 [restartedMain] INFO  o.h.a.c.Version                                    - HCANN000001: Hibernate Commons Annotations {5.1.2.Final} 
+2023-10-30 17:54:54 [restartedMain] INFO  o.h.d.Dialect                                      - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect 
+2023-10-30 17:54:55 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator                 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform] 
+2023-10-30 17:54:55 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean     - Initialized JPA EntityManagerFactory for persistence unit 'default' 
+2023-10-30 17:54:55 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning 
+2023-10-30 17:54:56 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer                 - LiveReload server is running on port 35729 
+2023-10-30 17:54:56 [restartedMain] INFO  o.a.c.h.Http11NioProtocol                          - Starting ProtocolHandler ["http-nio-8080"] 
+2023-10-30 17:54:56 [restartedMain] INFO  o.s.b.w.e.t.TomcatWebServer                        - Tomcat started on port(s): 8080 (http) with context path '' 
+2023-10-30 17:54:56 [restartedMain] INFO  c.v.WebBanVeXemPhimApplication                     - Started WebBanVeXemPhimApplication in 5.206 seconds (JVM running for 6.435) 
+2023-10-30 17:55:53 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[.[.[/]                                  - Initializing Spring DispatcherServlet 'dispatcherServlet' 
+2023-10-30 17:55:53 [http-nio-8080-exec-1] INFO  o.s.w.s.DispatcherServlet                          - Initializing Servlet 'dispatcherServlet' 
+2023-10-30 17:55:53 [http-nio-8080-exec-1] INFO  o.s.w.s.DispatcherServlet                          - Completed initialization in 2 ms 
+2023-10-30 17:55:53 [http-nio-8080-exec-1] DEBUG o.h.SQL                                            - 
+    select
+        phim0_.phim_id as phim_id1_0_,
+        phim0_.dao_dien as dao_dien2_0_,
+        phim0_.dien_vien as dien_vie3_0_,
+        phim0_.gia_ve as gia_ve4_0_,
+        phim0_.ngay_khoi_chieu as ngay_kho5_0_,
+        phim0_.poster as poster6_0_,
+        phim0_.ten_phim as ten_phim7_0_,
+        phim0_.the_loai as the_loai8_0_,
+        phim0_.thoi_luong as thoi_luo9_0_,
+        phim0_.tom_tat as tom_tat10_0_,
+        phim0_.creator_id as creator11_0_ 
+    from
+        `Phim` phim0_ 
+    order by
+        phim0_.ten_phim 
+2023-10-30 17:55:53 [http-nio-8080-exec-1] DEBUG o.h.SQL                                            - 
+    select
+        user0_.user_id as user_id1_1_0_,
+        user0_.email as email2_1_0_,
+        user0_.firstname as firstnam3_1_0_,
+        user0_.lastname as lastname4_1_0_,
+        user0_.password as password5_1_0_,
+        user0_.`role` as role6_1_0_,
+        user0_.status as status7_1_0_,
+        user0_.username as username8_1_0_ 
+    from
+        `User` user0_ 
+    where
+        user0_.user_id=? 
+2023-10-30 17:55:53 [http-nio-8080-exec-1] TRACE o.h.t.d.s.BasicBinder                              - binding parameter [1] as [INTEGER] - [1] 
+2023-10-30 17:55:53 [http-nio-8080-exec-1] DEBUG o.h.SQL                                            - 
+    select
+        user0_.user_id as user_id1_1_0_,
+        user0_.email as email2_1_0_,
+        user0_.firstname as firstnam3_1_0_,
+        user0_.lastname as lastname4_1_0_,
+        user0_.password as password5_1_0_,
+        user0_.`role` as role6_1_0_,
+        user0_.status as status7_1_0_,
+        user0_.username as username8_1_0_ 
+    from
+        `User` user0_ 
+    where
+        user0_.user_id=? 
+2023-10-30 17:55:53 [http-nio-8080-exec-1] TRACE o.h.t.d.s.BasicBinder                              - binding parameter [1] as [INTEGER] - [3] 
+2023-10-30 17:55:53 [http-nio-8080-exec-1] DEBUG o.h.SQL                                            - 
+    select
+        user0_.user_id as user_id1_1_0_,
+        user0_.email as email2_1_0_,
+        user0_.firstname as firstnam3_1_0_,
+        user0_.lastname as lastname4_1_0_,
+        user0_.password as password5_1_0_,
+        user0_.`role` as role6_1_0_,
+        user0_.status as status7_1_0_,
+        user0_.username as username8_1_0_ 
+    from
+        `User` user0_ 
+    where
+        user0_.user_id=? 
+2023-10-30 17:55:53 [http-nio-8080-exec-1] TRACE o.h.t.d.s.BasicBinder                              - binding parameter [1] as [INTEGER] - [2] 
+2023-10-30 17:56:02 [http-nio-8080-exec-3] DEBUG o.h.SQL                                            - 
+    select
+        count(*) as col_0_0_ 
+    from
+        `Phim` phim0_ 
+    where
+        phim0_.phim_id=? 
+2023-10-30 17:56:02 [http-nio-8080-exec-3] TRACE o.h.t.d.s.BasicBinder                              - binding parameter [1] as [INTEGER] - [3] 
+2023-10-30 17:56:02 [http-nio-8080-exec-3] DEBUG o.h.SQL                                            - 
+    select
+        phim0_.phim_id as phim_id1_0_0_,
+        phim0_.dao_dien as dao_dien2_0_0_,
+        phim0_.dien_vien as dien_vie3_0_0_,
+        phim0_.gia_ve as gia_ve4_0_0_,
+        phim0_.ngay_khoi_chieu as ngay_kho5_0_0_,
+        phim0_.poster as poster6_0_0_,
+        phim0_.ten_phim as ten_phim7_0_0_,
+        phim0_.the_loai as the_loai8_0_0_,
+        phim0_.thoi_luong as thoi_luo9_0_0_,
+        phim0_.tom_tat as tom_tat10_0_0_,
+        phim0_.creator_id as creator11_0_0_,
+        user1_.user_id as user_id1_1_1_,
+        user1_.email as email2_1_1_,
+        user1_.firstname as firstnam3_1_1_,
+        user1_.lastname as lastname4_1_1_,
+        user1_.password as password5_1_1_,
+        user1_.`role` as role6_1_1_,
+        user1_.status as status7_1_1_,
+        user1_.username as username8_1_1_ 
+    from
+        `Phim` phim0_ 
+    left outer join
+        `User` user1_ 
+            on phim0_.creator_id=user1_.user_id 
+    where
+        phim0_.phim_id=? 
+2023-10-30 17:56:02 [http-nio-8080-exec-3] TRACE o.h.t.d.s.BasicBinder                              - binding parameter [1] as [INTEGER] - [3] 
+2023-10-30 17:56:07 [http-nio-8080-exec-4] DEBUG o.h.SQL                                            - 
+    select
+        phim0_.phim_id as col_0_0_ 
+    from
+        `Phim` phim0_ 
+    where
+        phim0_.ten_phim=? limit ? 
+2023-10-30 17:56:07 [http-nio-8080-exec-4] TRACE o.h.t.d.s.BasicBinder                              - binding parameter [1] as [VARCHAR] - [Vầng trăng máu] 
+2023-10-30 17:57:05 [http-nio-8080-exec-5] DEBUG o.h.SQL                                            - 
+    select
+        phim0_.phim_id as col_0_0_ 
+    from
+        `Phim` phim0_ 
+    where
+        phim0_.ten_phim=? limit ? 
+2023-10-30 17:57:05 [http-nio-8080-exec-5] TRACE o.h.t.d.s.BasicBinder                              - binding parameter [1] as [VARCHAR] - [Thanh đẹp trai vãi lon] 
+2023-10-30 17:57:05 [http-nio-8080-exec-5] DEBUG o.h.SQL                                            - 
+    select
+        phim0_.phim_id as col_0_0_ 
+    from
+        `Phim` phim0_ 
+    where
+        phim0_.ten_phim=? limit ? 
+2023-10-30 17:57:05 [http-nio-8080-exec-5] TRACE o.h.t.d.s.BasicBinder                              - binding parameter [1] as [VARCHAR] - [Thanh đẹp trai vãi lon] 
+2023-10-30 17:57:05 [http-nio-8080-exec-5] DEBUG o.h.SQL                                            - 
+    insert 
+    into
+        `
+        Phim` (
+            dao_dien, dien_vien, gia_ve, ngay_khoi_chieu, poster, ten_phim, the_loai, thoi_luong, tom_tat, creator_id
+        ) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
+2023-10-30 17:57:05 [http-nio-8080-exec-5] TRACE o.h.t.d.s.BasicBinder                              - binding parameter [1] as [VARCHAR] - [Thanh đẹp trai] 
+2023-10-30 17:57:05 [http-nio-8080-exec-5] TRACE o.h.t.d.s.BasicBinder                              - binding parameter [2] as [VARCHAR] - [Thanh đẹp trai vip propro] 
+2023-10-30 17:57:05 [http-nio-8080-exec-5] TRACE o.h.t.d.s.BasicBinder                              - binding parameter [3] as [INTEGER] - [100000000] 
+2023-10-30 17:57:05 [http-nio-8080-exec-5] TRACE o.h.t.d.s.BasicBinder                              - binding parameter [4] as [TIMESTAMP] - [Mon Oct 30 17:57:05 ICT 2023] 
+2023-10-30 17:57:05 [http-nio-8080-exec-5] TRACE o.h.t.d.s.BasicBinder                              - binding parameter [5] as [VARCHAR] - [a link] 
+2023-10-30 17:57:05 [http-nio-8080-exec-5] TRACE o.h.t.d.s.BasicBinder                              - binding parameter [6] as [VARCHAR] - [Thanh đẹp trai vãi lon] 
+2023-10-30 17:57:05 [http-nio-8080-exec-5] TRACE o.h.t.d.s.BasicBinder                              - binding parameter [7] as [VARCHAR] - [giật gân] 
+2023-10-30 17:57:05 [http-nio-8080-exec-5] TRACE o.h.t.d.s.BasicBinder                              - binding parameter [8] as [VARCHAR] - [vô hạn] 
+2023-10-30 17:57:05 [http-nio-8080-exec-5] TRACE o.h.t.d.s.BasicBinder                              - binding parameter [9] as [VARCHAR] - [câu chuyện kể về Thanh đẹp trai] 
+2023-10-30 17:57:05 [http-nio-8080-exec-5] TRACE o.h.t.d.s.BasicBinder                              - binding parameter [10] as [INTEGER] - [5] 
+2023-10-30 17:58:33 [Thread-4] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean     - Closing JPA EntityManagerFactory for persistence unit 'default' 
+2023-10-30 17:58:33 [Thread-4] INFO  c.z.h.HikariDataSource                             - HikariPool-1 - Shutdown initiated... 
+2023-10-30 17:58:33 [Thread-4] INFO  c.z.h.HikariDataSource                             - HikariPool-1 - Shutdown completed. 
+2023-10-30 17:58:34 [restartedMain] INFO  c.v.WebBanVeXemPhimApplication                     - Starting WebBanVeXemPhimApplication using Java 11.0.19 on LAPTOP-F840DCUN with PID 11664 (C:\Users\ACER\Desktop\VTI\Spring\Web_ban_ve_xem_phim\target\classes started by ACER in C:\Users\ACER\Desktop\VTI\Spring\Web_ban_ve_xem_phim) 
+2023-10-30 17:58:34 [restartedMain] INFO  c.v.WebBanVeXemPhimApplication                     - No active profile set, falling back to default profiles: default 
+2023-10-30 17:58:36 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate          - Bootstrapping Spring Data JPA repositories in DEFAULT mode. 
+2023-10-30 17:58:36 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate          - Finished Spring Data repository scanning in 30 ms. Found 2 JPA repository interfaces. 
+2023-10-30 17:58:36 [restartedMain] INFO  o.s.b.w.e.t.TomcatWebServer                        - Tomcat initialized with port(s): 8080 (http) 
+2023-10-30 17:58:36 [restartedMain] INFO  o.a.c.h.Http11NioProtocol                          - Initializing ProtocolHandler ["http-nio-8080"] 
+2023-10-30 17:58:36 [restartedMain] INFO  o.a.c.c.StandardService                            - Starting service [Tomcat] 
+2023-10-30 17:58:36 [restartedMain] INFO  o.a.c.c.StandardEngine                             - Starting Servlet engine: [Apache Tomcat/9.0.55] 
+2023-10-30 17:58:36 [restartedMain] INFO  o.a.c.c.C.[.[.[/]                                  - Initializing Spring embedded WebApplicationContext 
+2023-10-30 17:58:36 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext     - Root WebApplicationContext: initialization completed in 2261 ms 
+2023-10-30 17:58:36 [restartedMain] INFO  c.z.h.HikariDataSource                             - HikariPool-2 - Starting... 
+2023-10-30 17:58:36 [restartedMain] INFO  c.z.h.HikariDataSource                             - HikariPool-2 - Start completed. 
+2023-10-30 17:58:36 [restartedMain] INFO  o.h.j.i.u.LogHelper                                - HHH000204: Processing PersistenceUnitInfo [name: default] 
+2023-10-30 17:58:36 [restartedMain] INFO  o.h.d.Dialect                                      - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect 
+2023-10-30 17:58:36 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator                 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform] 
+2023-10-30 17:58:36 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean     - Initialized JPA EntityManagerFactory for persistence unit 'default' 
+2023-10-30 17:58:37 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning 
+2023-10-30 17:58:37 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer                 - LiveReload server is running on port 35729 
+2023-10-30 17:58:37 [restartedMain] INFO  o.a.c.h.Http11NioProtocol                          - Starting ProtocolHandler ["http-nio-8080"] 
+2023-10-30 17:58:37 [restartedMain] INFO  o.s.b.w.e.t.TomcatWebServer                        - Tomcat started on port(s): 8080 (http) with context path '' 
+2023-10-30 17:58:37 [restartedMain] INFO  c.v.WebBanVeXemPhimApplication                     - Started WebBanVeXemPhimApplication in 3.768 seconds (JVM running for 227.513) 
+2023-10-30 17:58:37 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener  - Condition evaluation unchanged 
